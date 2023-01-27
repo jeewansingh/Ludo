@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #05a3a4, #006373);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: #eee;
+    width: 90vh;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    justify-content: center;
+    align-content: center;
+    margin: 5vh auto;
+    padding: 10px;
+
+    border: 1px solid black;
+}
+
+@media (max-width:900px) {
+    .container {
+        width: 100vw;
+        height: 100vw;
+        margin: 18vh auto;
+    }
+}
+
+/* MAIN COLOR BOX */
+.green,
+.blue,
+.red,
+.yellow {
+    border: 0.5px solid black;
+
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    z-index: 1;
+}
+
+.green {
+    background-color: green;
+    grid-row: 1 / span 6;
+    grid-column: 1 / span 6;
+
+}
+
+.blue {
+    background-color: blue;
+    grid-row: 10 / span 6;
+    grid-column: 10 / span 6;
+
+}
+
+.red {
+    background-color: red;
+    grid-row: 10 /span 6;
+    grid-column: 1 / span 6;
+
+}
+
+.yellow {
+    background-color: yellow;
+    grid-row: 1 / span 6;
+    grid-column: 10 / span 6;
+
+}
+
+/* CIRCLE IN MAIN COLOR BOX */
+.number {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 3;
+}
+
+.number-1 {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.number-2 {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.number-3 {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.number-4 {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+
+/* DARK SHADOW */
+.green-dark,
+.red-dark,
+.blue-dark,
+.yellow-dark {
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 4;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+}
+
+.green-dark {
+    background-color: darkgreen;
+}
+
+.red-dark {
+    background-color: darkred;
+}
+
+.blue-dark {
+    background-color: darkblue;
+}
+
+.yellow-dark {
+    background-color: darkgoldenrod;
+}
+
+/* BOXES */
+.box {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: .5px solid black;
+
+}
+
+.box-y {
+    background-color: yellow;
+}
+
+.box-g {
+    background-color: green;
+}
+
+.box-b {
+    background-color: blue;
+}
+
+.box-r {
+    background-color: red;
+}
+
+
+
+/* HOME */
+
+.home {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    grid-row: 7 / span 3;
+    grid-column: 7 / span 3;
+}
+
+.home-1 {
+    background-color: yellow;
+    clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+
+.home-2 {
+    background-color: green;
+    clip-path: polygon(0 0, 0% 100%, 50% 50%);
+}
+
+.home-3 {
+    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+    background-color: red;
+}
+
+.home-4 {
+    background-color: blue;
+    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+}
+
+/* STAR */
+.star {
+    height: 100%;
+    width: 100%;
+}
+
+.star-w {
+    height: 100%;
+    width: 100%;
+    filter: invert(100);
+}
